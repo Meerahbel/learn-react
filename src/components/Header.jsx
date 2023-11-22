@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -10,7 +11,9 @@ const Header = () => {
   return (
     <header className="relative flex justify-between items-center bg-[#3ebfff] w-full px-5 py-5">
       <div>
-        <h3 className="text-white font-bold text-2xl">sunnyside</h3>
+        <h3 className="text-white font-bold text-2xl">
+          <Link to="/">sunnyside</Link>
+        </h3>
       </div>
       <div onClick={handleMenu} className="md:hidden">
         <img
@@ -20,7 +23,9 @@ const Header = () => {
         />
       </div>
       <ul className="hidden md:flex items-center gap-10 text-white">
-        <li>About</li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
         <li>Services</li>
         <li>Projects</li>
         <li>
